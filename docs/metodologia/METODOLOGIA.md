@@ -49,6 +49,10 @@ Não é "fazer funcionar" — é fazer funcionar de um jeito que também ensine 
 - Não inventar processo novo, documento novo, ou regra nova sem consenso explícito do usuário.
 - Se uma sugestão de melhoria surgir fora da missão atual, ela é **anotada**, não executada — vira pauta para depois.
 - Ao dizer "vou fazer X", a próxima ação deve ser fazer X — não anunciar novamente.
+- Todo código sugerido já vem com comentários de **intenção** embutidos
+  (o "por quê", não o "o quê" — que já deve estar óbvio lendo o código),
+  e marcadores de decisões temporárias (`TODO:`), sem precisar de um
+  segundo passo para "adicionar comentários depois".
 
 ---
 
@@ -137,6 +141,10 @@ do que existia antes.
 ---
 
 ## Histórico de Versões
+
+### v1.2
+- Regra 4: código sugerido já vem com comentários de intenção
+  embutidos, sem exigir um passo separado de "comentar depois".
 
 ### v1.1
 - Adicionada Seção 8 (Gatilho de Revisão de Documentos): desatualizações
