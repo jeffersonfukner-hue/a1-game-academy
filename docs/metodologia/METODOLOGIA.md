@@ -62,6 +62,18 @@ Não é "fazer funcionar" — é fazer funcionar de um jeito que também ensine 
   Motivo: o código é também material didático para um curso futuro —
   a organização e os comentários precisam ensinar o "porquê" de cada
   decisão, não apenas fazer o código funcionar.
+- Toda regra de jogo nova (sistemas de limite, condições de bloqueio,
+  contadores, timers, etc.) vem acompanhada de algum feedback visual
+  na tela por padrão — mesmo que rudimentar (texto de debug, cor,
+  contador na HUD) — em vez de só um `print()` no console. Se depois
+  o desenvolvedor sentir que aquele feedback não é mais necessário,
+  ele é removido; mas a regra nasce visível, não escondida no console.
+  Motivo: testar visualmente é mais rápido e mais fiel à experiência
+  real do jogo do que caçar informação no terminal.
+- Constantes de balanceamento e ajuste (quantidades, tempos, raios,
+  distâncias) vivem centralizadas em `settings.py`, nunca soltas
+  dentro da lógica — permitindo testar e ajustar valores rapidamente
+  sem caçar números espalhados por múltiplos arquivos.
 
 ---
 
@@ -150,6 +162,11 @@ do que existia antes.
 ---
 
 ## Histórico de Versões
+
+### v1.4
+- Adicionadas duas regras à Seção 4: toda regra de jogo nova vem com
+  feedback visual por padrão (não só print no console); constantes de
+  balanceamento vivem centralizadas em `settings.py`.
 
 ### v1.3
 - Regra 4 expandida: arquivos com múltiplas responsabilidades são
