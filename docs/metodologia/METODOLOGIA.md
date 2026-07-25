@@ -53,6 +53,15 @@ Não é "fazer funcionar" — é fazer funcionar de um jeito que também ensine 
   (o "por quê", não o "o quê" — que já deve estar óbvio lendo o código),
   e marcadores de decisões temporárias (`TODO:`), sem precisar de um
   segundo passo para "adicionar comentários depois".
+- Todo arquivo com múltiplas responsabilidades é organizado em seções
+  comentadas (ex: `# === COMBATE ===`, `# === DESENHO ===`), e todo
+  método novo sugerido vem acompanhado da indicação explícita de qual
+  seção/classe ele pertence — nunca "adiciona esse método em algum
+  lugar", sempre "esse método vai na seção X da classe Y". Isso vale
+  tanto para arquivos novos quanto para edições em arquivos existentes.
+  Motivo: o código é também material didático para um curso futuro —
+  a organização e os comentários precisam ensinar o "porquê" de cada
+  decisão, não apenas fazer o código funcionar.
 
 ---
 
@@ -141,6 +150,11 @@ do que existia antes.
 ---
 
 ## Histórico de Versões
+
+### v1.3
+- Regra 4 expandida: arquivos com múltiplas responsabilidades são
+  organizados em seções comentadas; todo método novo vem com a seção/
+  classe de destino indicada explicitamente, nunca vago.
 
 ### v1.2
 - Regra 4: código sugerido já vem com comentários de intenção
