@@ -33,6 +33,7 @@ Não é "fazer funcionar" — é fazer funcionar de um jeito que também ensine 
 | *(erro colado)* | Algo deu errado → IA documenta: Sintoma / Causa / Investigação / Solução / Lição Aprendida |
 | *(log/print colado)* | Resultado visual/textual do jogo para análise — pode substituir "Feito" ou relato de erro |
 | **Mayday** | Usuário percebeu desvio de metodologia → IA para, faz autoverificação, corrige rota |
+| **Palavra:** *(qualquer prefixo seguido de dois-pontos)* | Sinal geral de **triagem**, não de implementação imediata. A IA deve: (1) identificar se o conteúdo já tem um lugar existente na documentação (Sprint, seção do `VISAO.md`, `METODOLOGIA.md`) e registrar lá; ou (2) se for algo novo, sugerir onde/como organizar antes de registrar. Só implementa código imediatamente se identificar necessidade real e disser isso explicitamente antes de agir — do contrário, o padrão é registrar/organizar, não codar. `Refinamento:` é um caso específico já estabelecido deste padrão geral (sempre vai para o Bloco de Refinamento do `VISAO.md`). |
 
 *(Nota histórica: o comando anterior era "ENGAGE", mas seu significado foi corrompido por alucinação em uma sessão anterior, passando a significar o oposto do que o usuário originalmente pretendia. Por isso foi aposentado e substituído por "Mayday".)*
 
@@ -174,6 +175,13 @@ do que existia antes.
 ---
 
 ## Histórico de Versões
+
+### v1.6
+- Generalizado o comando "Refinamento:" para um padrão amplo: qualquer
+  `Palavra:` seguida de dois-pontos sinaliza triagem — a IA identifica
+  se já existe um lugar na documentação para aquele conteúdo (e
+  registra lá) ou sugere como organizar, sem implementar código de
+  imediato salvo necessidade real explicitamente sinalizada.
 
 ### v1.5
 - Adicionado "Agrupamento Temático de Sprints" à Seção 5: funcionalidades
