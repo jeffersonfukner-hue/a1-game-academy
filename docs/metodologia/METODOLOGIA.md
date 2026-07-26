@@ -107,6 +107,18 @@ Sempre que houver informação suficiente para justificar um novo registro — n
 - Resumo Executivo
 - Material para Videoaula / Ebook
 
+### Agrupamento Temático de Sprints (Organização para Curso)
+
+Sprints relacionadas a uma mesma funcionalidade grande (ex: sistema de
+Power-ups) devem ser tratadas como um **bloco temático** — várias
+Sprints específicas e bem escopadas, cada uma correspondente a um
+vídeo de até ~10 minutos, em vez de uma única Sprint gigante tentando
+cobrir tudo de uma vez. Isso mantém tanto o desenvolvimento quanto o
+material didático em unidades digeríveis. Ao planejar uma
+funcionalidade grande, vale nomear o bloco (ex: "Bloco de Power-ups")
+e dividir suas Sprints internas antes de começar a implementar,
+similar ao que já é feito com Sprints individuais.
+
 ---
 
 ## 6. Estrutura de Repositórios
@@ -162,6 +174,11 @@ do que existia antes.
 ---
 
 ## Histórico de Versões
+
+### v1.5
+- Adicionado "Agrupamento Temático de Sprints" à Seção 5: funcionalidades
+  grandes (ex: Power-ups) devem ser divididas em blocos de Sprints
+  específicas, cada uma correspondente a um vídeo de até ~10 minutos.
 
 ### v1.4
 - Adicionadas duas regras à Seção 4: toda regra de jogo nova vem com
