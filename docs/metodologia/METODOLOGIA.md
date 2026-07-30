@@ -1,4 +1,4 @@
-# METODOLOGIA.md — v1.0 (Consolidado)
+# METODOLOGIA.md — v1.7 (Consolidado)
 ### A1 Game Academy
 
 > **Este documento substitui:** `CADERNO_DO_MENTOR.md`, `PROTOCOL.MD`, `SPRINT_TEMPLATE.md` (versões anteriores).
@@ -33,7 +33,7 @@ Não é "fazer funcionar" — é fazer funcionar de um jeito que também ensine 
 | *(erro colado)* | Algo deu errado → IA documenta: Sintoma / Causa / Investigação / Solução / Lição Aprendida |
 | *(log/print colado)* | Resultado visual/textual do jogo para análise — pode substituir "Feito" ou relato de erro |
 | **Mayday** | Usuário percebeu desvio de metodologia → IA para, faz autoverificação, corrige rota |
-| **Palavra:** *(qualquer prefixo seguido de dois-pontos)* | Sinal geral de **triagem**, não de implementação imediata. A IA deve: (1) identificar se o conteúdo já tem um lugar existente na documentação (Sprint, seção do `VISAO.md`, `METODOLOGIA.md`) e registrar lá; ou (2) se for algo novo, sugerir onde/como organizar antes de registrar. Só implementa código imediatamente se identificar necessidade real e disser isso explicitamente antes de agir — do contrário, o padrão é registrar/organizar, não codar. `Refinamento:` é um caso específico já estabelecido deste padrão geral (sempre vai para o Bloco de Refinamento do `VISAO.md`). |
+| **Palavra:** *(qualquer prefixo seguido de dois-pontos)* | Sinal geral de **triagem**, não de implementação imediata. A IA deve: (1) identificar se o conteúdo já tem um lugar existente na documentação (Sprint, seção do `CONTEXTO_PROJETO.md`, `VISAO.md`, `METODOLOGIA.md`) e registrar lá; ou (2) se for algo novo, sugerir onde/como organizar antes de registrar. Só implementa código imediatamente se identificar necessidade real e disser isso explicitamente antes de agir — do contrário, o padrão é registrar/organizar, não codar. `Refinamento:` é um caso específico já estabelecido deste padrão geral (sempre vai para "Bugs e Refinamentos Pendentes" do `CONTEXTO_PROJETO.md` — não mais o VISAO.md, desde que a reestruturação v6.0 do VISAO.md moveu todo conteúdo operacional de pendências para o Contexto). |
 
 *(Nota histórica: o comando anterior era "ENGAGE", mas seu significado foi corrompido por alucinação em uma sessão anterior, passando a significar o oposto do que o usuário originalmente pretendia. Por isso foi aposentado e substituído por "Mayday".)*
 
@@ -164,9 +164,27 @@ Sprints, etc.), a IA deve:
    afetado, junto com o usuário.
 3. Retomar a missão original depois da correção.
 
+**Caso especial - mudança de PAPEL/ESTRUTURA de um documento (não so
+conteudo pontual):** quando uma sessao redefine o que um dos 3
+documentos principais (`CONTEXTO_PROJETO.md`, `VISAO.md`,
+`METODOLOGIA.md`) guarda ou deixa de guardar - como a reestruturacao
+v6.0 do VISAO.md, que moveu todo conteudo operacional de pendencias
+para o Contexto - a IA NAO deve considerar a correcao completa so por
+ter editado o documento que mudou. Antes de fechar essa sprint, a IA
+deve ativamente verificar, nos OUTROS DOIS documentos, qualquer
+referencia textual ao papel antigo (nomes de secao, "onde isso vive",
+"consultar X para Y") e corrigir todas de uma vez - nao esperar que
+apareçam por acaso em conversas futuras. Checklist minimo: se o
+VISAO.md mudou, revisar referencias a ele no CONTEXTO_PROJETO.md e na
+METODOLOGIA.md; se o CONTEXTO_PROJETO.md mudou, revisar VISAO.md e
+METODOLOGIA.md; e assim por diante - os 3 documentos se citam
+mutuamente, entao mudanca estrutural em 1 e' sempre candidata a
+desatualizar os outros 2.
+
 **Não deixar acumular.** Desatualização adiada é desatualização
 esquecida — foi exatamente assim que os documentos institucionais
-ficaram obsoletos antes desta reorganização.
+ficaram obsoletos antes desta reorganização, e foi exatamente assim
+que a referência a `Refinamento:` ficou obsoleta depois dela.
 
 Todo documento institucional carrega um **Histórico de Versões**,
 para que as atualizações fiquem rastreáveis sem perder o registro
@@ -175,6 +193,18 @@ do que existia antes.
 ---
 
 ## Histórico de Versões
+
+### v1.7
+- Corrigida referência desatualizada na Seção 3: `Refinamento:` aponta para
+  "Bugs e Refinamentos Pendentes" do `CONTEXTO_PROJETO.md`, não mais para
+  o VISAO.md - a reestruturação v6.0 do VISAO.md moveu todo o conteúdo
+  operacional de pendências para o Contexto, mas essa mudança não tinha
+  sido propagada de volta para a METODOLOGIA.md.
+- Reforçada a Seção 8 (Gatilho de Revisão de Documentos): mudança de
+  PAPEL/ESTRUTURA de um dos 3 documentos principais agora exige checagem
+  cruzada ativa nos outros dois antes de considerar a correção completa -
+  não basta corrigir só o documento que mudou. Motivo: foi assim que essa
+  própria referência ficou obsoleta, silenciosamente, por uma sessão inteira.
 
 ### v1.6
 - Generalizado o comando "Refinamento:" para um padrão amplo: qualquer
